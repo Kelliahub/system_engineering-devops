@@ -1,6 +1,16 @@
 #!/usr/bin/env bash
-# This script prints "Best School" 10 times and writes the output to a file named "best_school.txt".
+# This script checks the status of a file named "school" and prints messages depending on its existence and type.
 
-for i in {1..10}; do
-    echo "Best School"
-done > best_school.txt
+if [ ! -e school ]; then
+    echo "File does not exist"
+else
+    if [ -f school ]; then
+        if [ ! -s school ]; then
+            echo "File exists but empty"
+        else
+            echo "File exists and is a regular file"
+        fi
+    elif [ -d school ]; then
+        echo "File exists but it’s a directory"
+    fi
+fi
