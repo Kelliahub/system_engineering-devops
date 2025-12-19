@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
-# Infinite loop script that handles SIGTERM and prints "I am invincible!!!"
+# Infinite loop that ignores SIGTERM and confirms receipt
 
-trap 'echo "I am invincible!!!"' SIGTERM
+trap 'echo "OK"' SIGTERM
 
 while true; do
     echo "To infinity and beyond"
