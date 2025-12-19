@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Stop the "7-highlander" process without using kill or killall
+
+for pid in $(pgrep -f 7-highlander); do
+    echo -15 > /proc/$pid/oom_score_adj 2>/dev/null
+    echo "Sent SIGTERM to process $pid"
+done
