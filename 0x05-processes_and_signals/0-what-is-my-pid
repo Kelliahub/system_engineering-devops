@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-# Display the PID of the current process
-
-echo $$
+# Display the PID of this script
+echo "$$"

@@ -1,4 +1,3 @@
 #!/usr/bin/env bash
-# Display all running processes with UID, PID, and hierarchy
-
-ps -eo uid,pid,ppid,tty,stat,start,time,cmd --forest
+# Display all running processes
+ps -ef

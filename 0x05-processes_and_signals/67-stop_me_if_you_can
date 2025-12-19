@@ -1,6 +1,3 @@
 #!/usr/bin/env bash
-# Send SIGTERM to the 7-highlander process without using kill or killall
-
-for pid in $(pgrep -f 7-highlander); do
-    echo -15 > /proc/"$pid"/oom_score_adj 2>/dev/null
-done
+# Send SIGTERM to 7-highlander
+kill "$(pgrep -f 7-highlander)"
