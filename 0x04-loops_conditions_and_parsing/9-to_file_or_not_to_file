@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# This script prints "Best School" 10 times and writes the output to a file named "best_school.txt".
+
+for i in {1..10}; do
+    echo "Best School"
+done > best_school.txt
