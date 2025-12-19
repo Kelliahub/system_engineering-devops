@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
-# Display all running processes with user info and hierarchy
+# Display all running processes with full info and hierarchy
 
-ps -e f
+ps -ef --forest
