@@ -1,9 +1,6 @@
 #!/usr/bin/env bash
-# This script lists files in the current directory showing only the part after the first dash.
+# List current directory contents without hidden files, remove prefix before first dash
 
 for file in *; do
-    if [[ $file == .* ]]; then
-        continue
-    fi
-    echo "${file#*-}"
+  [[ -f $file || -d $file ]] && echo "${file#*-}"
 done
